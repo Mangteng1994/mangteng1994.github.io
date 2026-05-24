@@ -6,6 +6,163 @@
 <title>cornell</title>
 <link rel="stylesheet" href="stage/build/export/base.css">
 <link rel="stylesheet" href="appearance/themes/Savor/theme.css">
+<style id="snippetCSS20250706114804-cqrlksg">/* 康奈尔笔记模板：匹配 sy-plugin-enhance 导出的 custom-iscornell 超级块，不依赖插件 */
+.protyle-wysiwyg [custom-iscornell="true"],
+.b3-typography [custom-iscornell="true"] {
+  --cornell-gap: 14px;
+  --cornell-padding: 18px;
+  --cornell-clue-bg: #d9d5ff;
+  --cornell-clue-title: #5b63d6;
+  --cornell-note-bg: #f7e8da;
+  --cornell-note-title: #ff7a2f;
+  --cornell-summary-bg: #ffd9de;
+  --cornell-summary-title: #ff4d57;
+  --cornell-text: var(--b3-theme-on-background);
+  display: block;
+  box-sizing: border-box;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"],
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"] {
+  margin: 0 !important;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child {
+  gap: var(--cornell-gap);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child {
+  flex: 0 0 33%;
+  width: 33%;
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 var(--cornell-gap) var(--cornell-gap) 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  background: var(--cornell-clue-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child),
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) {
+  flex: 1 1 auto;
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 0 var(--cornell-gap) 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  background: var(--cornell-note-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child),
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) {
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  background: var(--cornell-summary-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child > [data-node-id]:first-child {
+  color: var(--cornell-clue-title) !important;
+  font-weight: 700;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child {
+  color: var(--cornell-note-title) !important;
+  font-weight: 700;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child {
+  color: var(--cornell-summary-title) !important;
+  font-weight: 700;
+}</style>
+<style id="snippetCSS20250622223508-3l332yw">.protyle-task--done > div[data-node-id].p {
+  text-decoration: none !important;</style>
+<style id="snippetCSS20250122192253-d0rx6z2">[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action svg{
+	color:transparent;
+}
+
+[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action::before {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0px;
+	margin-left:13px;
+    font-family: Arial;
+	content: "•";
+}
+
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}</style>
+<style id="snippetCSS-siyuan-plugin-font-manager" data-font-manager-injected="1">@font-face {
+  font-family: '空山楷+常规';
+  font-weight: normal;
+  src: url('/public/siyuan-plugin-font-manager/fonts/%E7%A9%BA%E5%B1%B1%E6%A5%B7%2B%E5%B8%B8%E8%A7%84.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+:root:lang(zh_CN),
+:root:lang(zh_CHT),
+:root:lang(en_US),
+:root:lang(ja_JP) {
+  --b3-font-family: '空山楷+常规', 'Emojis Additional', 'Emojis Reset', BlinkMacSystemFont, Helvetica, 'PingFang SC', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Source Han Sans SC', arial, 'Microsoft Yahei', sans-serif, emojis !important;
+  --b3-font-family-code: '空山楷+常规', 'Emojis Additional', 'Emojis Reset', BlinkMacSystemFont, Helvetica, 'PingFang SC', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Source Han Sans SC', arial, 'Microsoft Yahei', sans-serif, emojis !important;
+}
+body,
+#layouts,
+.layout,
+.layout__center,
+.layout-tab-container,
+.b3-typography,
+.protyle,
+.protyle-title,
+.protyle-title__input,
+.protyle-wysiwyg [data-node-id],
+.protyle-wysiwyg [data-node-id] *,
+.protyle-wysiwyg [data-node-id] code,
+.protyle-wysiwyg [data-node-id] .hljs,
+.code-block,
+.code-block code,
+.code-block .hljs,
+#layouts *:not(.b3-icon):not(.fn__icon):not([class*='icon']):not(svg):not(svg *),
+code,
+pre {
+  font-family: var(--b3-font-family) !important;
+}</style>
 <style data-name="康奈尔笔记布局（不依赖 sy-plugin-enhance）">
 /* 康奈尔笔记模板：匹配 sy-plugin-enhance 导出的 custom-iscornell 超级块，不依赖插件 */
 .protyle-wysiwyg [custom-iscornell="true"],
@@ -138,15 +295,27 @@ body { margin: 0; }
 </style>
 </head>
 <body>
-<div class="protyle-wysiwyg protyle-wysiwyg--attr" id="preview" data-doc-type="NodeDocument"><div data-subtype="h1" data-node-id="20260511072803-s8zl1zk" data-type="NodeHeading" class="h1" id="20260511072803-s8zl1zk" title="cornell" updated="20260524220626"><div contenteditable="false" spellcheck="false">cornell</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141304-vhxmopf" data-type="NodeSuperBlock" class="sb" custom-iscornell="true" id="20260524141304-vhxmopf" updated="20260524220626" data-sb-layout="row"><div data-node-id="20260524141308-9gkb3uk" data-type="NodeSuperBlock" class="sb" id="20260524141308-9gkb3uk" updated="20260524220622" data-sb-layout="col"><div data-node-id="20260524141308-osc1s0f" data-type="NodeSuperBlock" class="sb" updated="20260524220548" id="20260524141308-osc1s0f" data-sb-layout="row"><div data-node-id="20260524141308-znt1tue" data-type="NodeParagraph" class="p" id="20260524141308-znt1tue" updated="20260524141308"><div contenteditable="false" spellcheck="false">线索</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-pkbb3bg" data-type="NodeParagraph" class="p" id="20260524141308-pkbb3bg" updated="20260524220548"><div contenteditable="false" spellcheck="false">111</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-pzrnmte" data-type="NodeSuperBlock" class="sb" id="20260524141308-pzrnmte" updated="20260524220622" data-sb-layout="row"><div data-node-id="20260524141308-abzan3w" data-type="NodeParagraph" class="p" id="20260524141308-abzan3w" updated="20260524141308"><div contenteditable="false" spellcheck="false">笔记</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-p6zr10b" data-type="NodeParagraph" class="p" id="20260524141308-p6zr10b" updated="20260524220622"><div contenteditable="false" spellcheck="false">地方阿第三方</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-lvyiix2" data-type="NodeSuperBlock" class="sb" updated="20260524220626" id="20260524141308-lvyiix2" data-sb-layout="row"><div data-node-id="20260524141308-nnadc16" data-type="NodeParagraph" class="p" id="20260524141308-nnadc16" updated="20260524141308"><div contenteditable="false" spellcheck="false">总结</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-2y14pg4" data-type="NodeParagraph" class="p" id="20260524141308-2y14pg4" updated="20260524220625"><div contenteditable="false" spellcheck="false">代付款垃圾的时候鲂痉放到</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524220625-5mm983v" data-type="NodeParagraph" class="p" id="20260524220625-5mm983v" updated="20260524220626"><div contenteditable="false" spellcheck="false">地方ad</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141316-22owmum" data-type="NodeParagraph" class="p" id="20260524141316-22owmum" updated="20260524141316"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141317-jm7szzk" data-type="NodeParagraph" class="p" id="20260524141317-jm7szzk" updated="20260524141317"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div></div>
+<div class="protyle-wysiwyg protyle-wysiwyg--attr" id="preview" data-doc-type="NodeDocument"><div data-subtype="h1" data-node-id="20260511072803-s8zl1zk" data-type="NodeHeading" class="h1" updated="20260524220626" id="20260511072803-s8zl1zk" title="cornell"><div contenteditable="false" spellcheck="false">cornell</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141304-vhxmopf" data-type="NodeSuperBlock" class="sb" custom-iscornell="true" id="20260524141304-vhxmopf" updated="20260524220626" data-sb-layout="row"><div data-node-id="20260524141308-9gkb3uk" data-type="NodeSuperBlock" class="sb" updated="20260524220622" id="20260524141308-9gkb3uk" data-sb-layout="col"><div data-node-id="20260524141308-osc1s0f" data-type="NodeSuperBlock" class="sb" id="20260524141308-osc1s0f" updated="20260524220548" data-sb-layout="row"><div data-node-id="20260524141308-znt1tue" data-type="NodeParagraph" class="p" id="20260524141308-znt1tue" updated="20260524141308"><div contenteditable="false" spellcheck="false">线索</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-pkbb3bg" data-type="NodeParagraph" class="p" id="20260524141308-pkbb3bg" updated="20260524220548"><div contenteditable="false" spellcheck="false">111</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-pzrnmte" data-type="NodeSuperBlock" class="sb" id="20260524141308-pzrnmte" updated="20260524220622" data-sb-layout="row"><div data-node-id="20260524141308-abzan3w" data-type="NodeParagraph" class="p" id="20260524141308-abzan3w" updated="20260524141308"><div contenteditable="false" spellcheck="false">笔记</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-p6zr10b" data-type="NodeParagraph" class="p" updated="20260524220622" id="20260524141308-p6zr10b"><div contenteditable="false" spellcheck="false">地方阿第三方</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-lvyiix2" data-type="NodeSuperBlock" class="sb" id="20260524141308-lvyiix2" updated="20260524220626" data-sb-layout="row"><div data-node-id="20260524141308-nnadc16" data-type="NodeParagraph" class="p" id="20260524141308-nnadc16" updated="20260524141308"><div contenteditable="false" spellcheck="false">总结</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141308-2y14pg4" data-type="NodeParagraph" class="p" id="20260524141308-2y14pg4" updated="20260524220625"><div contenteditable="false" spellcheck="false">代付款垃圾的时候鲂痉放到</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524220625-5mm983v" data-type="NodeParagraph" class="p" id="20260524220625-5mm983v" updated="20260524220626"><div contenteditable="false" spellcheck="false">地方ad</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141316-22owmum" data-type="NodeParagraph" class="p" id="20260524141316-22owmum" updated="20260524141316"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524141317-jm7szzk" data-type="NodeParagraph" class="p" id="20260524141317-jm7szzk" updated="20260524141317"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div></div>
 <script>
 window.siyuan = {
   config: {
-    appearance: { mode: 0, codeBlockThemeDark: "github-dark", codeBlockThemeLight: "github", codeBlockTheme: "github" },
-    editor: { codeLineWrap: true, codeLigatures: false, codeSyntaxHighlightLineNum: true, fontSize: 16, plantUMLServePath: "", katexMacros: "" }
+    appearance: {
+      mode: 0,
+      codeBlockThemeDark: "base16/dracula",
+      codeBlockThemeLight: "github"
+    },
+    editor: {
+      codeLineWrap: false,
+      codeLigatures: false,
+      codeSyntaxHighlightLineNum: false,
+      fontSize: 16,
+      plantUMLServePath: "https://www.plantuml.com/plantuml/svg/~1",
+      katexMacros: "{}"
+    }
   },
   languages: { copy: "复制" }
 };
+window.siyuan.config.appearance.codeBlockTheme = "github";
 </script>
 <script src="stage/protyle/js/protyle-html.js"></script>
 <script src="stage/build/export/protyle-method.js"></script>
