@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个股跟踪</title>
+<link rel="stylesheet" href="stage/build/export/base.css">
+<link rel="stylesheet" href="appearance/themes/Savor/theme.css">
+<style id="snippetCSS20250706114804-cqrlksg">/* 康奈尔笔记模板：匹配 sy-plugin-enhance 导出的 custom-iscornell 超级块，不依赖插件 */
+.protyle-wysiwyg [custom-iscornell="true"],
+.b3-typography [custom-iscornell="true"] {
+  --cornell-gap: 14px;
+  --cornell-padding: 18px;
+  --cornell-clue-bg: #d9d5ff;
+  --cornell-clue-title: #5b63d6;
+  --cornell-note-bg: #f7e8da;
+  --cornell-note-title: #ff7a2f;
+  --cornell-summary-bg: #ffd9de;
+  --cornell-summary-title: #ff4d57;
+  --cornell-text: var(--b3-theme-on-background);
+  display: block;
+  box-sizing: border-box;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"],
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"] {
+  margin: 0 !important;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child {
+  gap: var(--cornell-gap);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child {
+  flex: 0 0 33%;
+  width: 33%;
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 var(--cornell-gap) var(--cornell-gap) 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  background: var(--cornell-clue-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child),
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) {
+  flex: 1 1 auto;
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 0 var(--cornell-gap) 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  background: var(--cornell-note-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child),
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) {
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  background: var(--cornell-summary-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child > [data-node-id]:first-child {
+  color: var(--cornell-clue-title) !important;
+  font-weight: 700;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child {
+  color: var(--cornell-note-title) !important;
+  font-weight: 700;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child {
+  color: var(--cornell-summary-title) !important;
+  font-weight: 700;
+}</style>
+<style id="snippetCSS20250622223508-3l332yw">.protyle-task--done > div[data-node-id].p {
+  text-decoration: none !important;</style>
+<style id="snippetCSS20250122192253-d0rx6z2">[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action svg{
+	color:transparent;
+}
+
+[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action::before {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0px;
+	margin-left:13px;
+    font-family: Arial;
+	content: "•";
+}
+
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}</style>
+<style id="snippetCSS-siyuan-plugin-font-manager" data-font-manager-injected="1">@font-face {
+  font-family: '空山楷+常规';
+  font-weight: normal;
+  src: url('/public/siyuan-plugin-font-manager/fonts/%E7%A9%BA%E5%B1%B1%E6%A5%B7%2B%E5%B8%B8%E8%A7%84.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+:root:lang(zh_CN),
+:root:lang(zh_CHT),
+:root:lang(en_US),
+:root:lang(ja_JP) {
+  --b3-font-family: '空山楷+常规', 'Emojis Additional', 'Emojis Reset', BlinkMacSystemFont, Helvetica, 'PingFang SC', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Source Han Sans SC', arial, 'Microsoft Yahei', sans-serif, emojis !important;
+  --b3-font-family-code: '空山楷+常规', 'Emojis Additional', 'Emojis Reset', BlinkMacSystemFont, Helvetica, 'PingFang SC', 'Luxi Sans', 'DejaVu Sans', 'Hiragino Sans GB', 'Source Han Sans SC', arial, 'Microsoft Yahei', sans-serif, emojis !important;
+}
+body,
+#layouts,
+.layout,
+.layout__center,
+.layout-tab-container,
+.b3-typography,
+.protyle,
+.protyle-title,
+.protyle-title__input,
+.protyle-wysiwyg [data-node-id],
+.protyle-wysiwyg [data-node-id] *,
+.protyle-wysiwyg [data-node-id] code,
+.protyle-wysiwyg [data-node-id] .hljs,
+.code-block,
+.code-block code,
+.code-block .hljs,
+#layouts *:not(.b3-icon):not(.fn__icon):not([class*='icon']):not(svg):not(svg *),
+code,
+pre {
+  font-family: var(--b3-font-family) !important;
+}</style>
+<style data-name="康奈尔笔记布局（不依赖 sy-plugin-enhance）">
+/* 康奈尔笔记模板：匹配 sy-plugin-enhance 导出的 custom-iscornell 超级块，不依赖插件 */
+.protyle-wysiwyg [custom-iscornell="true"],
+.b3-typography [custom-iscornell="true"] {
+  --cornell-gap: 14px;
+  --cornell-padding: 18px;
+  --cornell-clue-bg: #d9d5ff;
+  --cornell-clue-title: #5b63d6;
+  --cornell-note-bg: #f7e8da;
+  --cornell-note-title: #ff7a2f;
+  --cornell-summary-bg: #ffd9de;
+  --cornell-summary-title: #ff4d57;
+  --cornell-text: var(--b3-theme-on-background);
+  display: block;
+  box-sizing: border-box;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"],
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"] {
+  margin: 0 !important;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child {
+  gap: var(--cornell-gap);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child {
+  flex: 0 0 33%;
+  width: 33%;
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 var(--cornell-gap) var(--cornell-gap) 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  background: var(--cornell-clue-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child),
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) {
+  flex: 1 1 auto;
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 0 var(--cornell-gap) 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  background: var(--cornell-note-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child),
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) {
+  min-height: 110px;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: var(--cornell-padding) !important;
+  border-radius: 0 !important;
+  background: var(--cornell-summary-bg) !important;
+  color: var(--cornell-text);
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:first-child > [data-node-id]:first-child {
+  color: var(--cornell-clue-title) !important;
+  font-weight: 700;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:first-child [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child {
+  color: var(--cornell-note-title) !important;
+  font-weight: 700;
+}
+.protyle-wysiwyg [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child,
+.b3-typography [custom-iscornell="true"] > [data-type="NodeSuperBlock"]:not(:first-child) > [data-node-id]:first-child {
+  color: var(--cornell-summary-title) !important;
+  font-weight: 700;
+}
+</style>
+<style data-name="取消选中任务的横线，改用灰色字体 ">
+.protyle-task--done > div[data-node-id].p {
+  text-decoration: none !important;
+</style>
+<style data-name="无序列表添加层级样式">
+[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action svg{
+	color:transparent;
+}
+
+[data-subtype="u"]>.li[data-subtype="u"]>.protyle-action::before {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0px;
+	margin-left:13px;
+    font-family: Arial;
+	content: "•";
+}
+
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "•";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "◦";
+}
+[data-subtype="u"]>[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"] .li[data-subtype="u"]>.protyle-action::before{
+	content: "▪";
+}
+</style>
+<style>
+body { margin: 0; }
+.protyle-wysiwyg { max-width: 800px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+</style>
+</head>
+<body>
+<div class="protyle-wysiwyg protyle-wysiwyg--attr" id="preview" data-doc-type="NodeDocument"><div data-subtype="h1" data-node-id="20230529105733-vbu9im4" data-type="NodeHeading" class="h1" custom-publish-time="1737265795457" custom-sy-readonly="false" custom-tomatoUpdated="1737265259859" id="20230529105733-vbu9im4" title="个股跟踪" custom-publish-status="publish" updated="20260521014455"><div contenteditable="false" spellcheck="false">个股跟踪</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101025208-aafsjwf" data-type="NodeParagraph" class="p" id="20241101025208-aafsjwf" updated="20260121233101"><div contenteditable="false" spellcheck="false">跟踪类型<sup class="footnotes-ref" id="footnotes-ref-1"><a href="#footnotes-def-1">1</a></sup> 个股类型<sup class="footnotes-ref" id="footnotes-ref-4"><a href="#footnotes-def-4">4</a></sup> 选股方法<sup class="footnotes-ref" id="footnotes-ref-5"><a href="#footnotes-def-5">5</a></sup></div><div class="protyle-attr" contenteditable="false"></div></div><div data-subtype="h1" data-node-id="20241028235141-ekgbusl" data-type="NodeHeading" class="h1" id="20241028235141-ekgbusl" updated="20260521014455"><div contenteditable="false" spellcheck="false">数据库</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260524231303-dwbh5t5" data-type="NodeTable" class="table"><div contenteditable="false"><table contenteditable="false" spellcheck="false"><colgroup><col /><col /><col /><col /><col /><col /><col /><col /></colgroup><thead><tr><th>行号</th><th>主键</th><th>持有状态</th><th>跟踪类型</th><th>行业</th><th>地区</th><th>更新日期</th><th>备注</th></tr></thead><tbody><tr><td>1</td><td>红旗连锁</td><td>观望</td><td>四类跟踪</td><td></td><td></td><td>2026-05-21 01:39</td><td><br /></td></tr><tr><td>2</td><td>彩虹集团</td><td>观望</td><td>四类跟踪</td><td></td><td></td><td>2026-05-21 01:39</td><td><br /></td></tr><tr><td>3</td><td>宏发股份</td><td></td><td>一类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-21 01:32</td><td><br /></td></tr><tr><td>4</td><td>科新机电</td><td></td><td></td><td></td><td></td><td>2026-05-21 01:08</td><td><br /></td></tr><tr><td>5</td><td>中科通达</td><td></td><td></td><td></td><td>湖北</td><td>2026-05-21 01:05</td><td><br /></td></tr><tr><td>6</td><td>司尔特</td><td></td><td></td><td></td><td>安徽</td><td>2026-05-20 23:52</td><td><br /></td></tr><tr><td>7</td><td>海特生物</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-20 23:29</td><td>业务结构有变化、还没有扭亏；2025股东大会，变化时间节点还早，调整跟踪级别<br /></td></tr><tr><td>8</td><td>广信股份</td><td></td><td>一类跟踪</td><td></td><td>安徽</td><td>2026-05-17 22:52</td><td><br /></td></tr><tr><td>9</td><td>川仪股份</td><td></td><td></td><td></td><td>重庆</td><td>2026-05-17 21:00</td><td><br /></td></tr><tr><td>10</td><td>花园生物</td><td>持有</td><td></td><td>维生素</td><td>浙江</td><td>2026-05-15 00:14</td><td><br /></td></tr><tr><td>11</td><td>回天新材</td><td></td><td>二类跟踪</td><td></td><td>湖北 襄阳</td><td>2026-05-15 00:02</td><td>汽车/电子业务高增长正在接替光伏成为新驱动，<br /></td></tr><tr><td>12</td><td>三安光电</td><td></td><td>三类跟踪</td><td></td><td>湖北 鄂州</td><td>2026-05-15 00:01</td><td>有点复杂，但是行业景气度还行<br /></td></tr><tr><td>13</td><td>烽火通信</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-14 22:57</td><td><br /></td></tr><tr><td>14</td><td>楚天高速</td><td></td><td>四类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-14 22:55</td><td>平平无奇，传统行业<br /></td></tr><tr><td>15</td><td>湖北能源</td><td></td><td></td><td></td><td>湖北 武汉</td><td>2026-05-14 22:54</td><td><br /></td></tr><tr><td>16</td><td>马应龙</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-14 22:53</td><td>医药商业占比较高，毛利低；眼霜、湿厕纸增速快，毛率估计60%多，需要验证竞争怎么样？<br /></td></tr><tr><td>17</td><td>嘉必优</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-13 22:56</td><td>恶性事件<br /></td></tr><tr><td>18</td><td>中贝通信</td><td></td><td>四类跟踪</td><td>5G</td><td>湖北 武汉</td><td>2026-05-12 22:30</td><td>估值高、有点复杂<br /></td></tr><tr><td>19</td><td>航天电子</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-09 23:06</td><td>估值高了<br /></td></tr><tr><td>20</td><td>科前生物</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-09 23:06</td><td>猪周期<br /></td></tr><tr><td>21</td><td>光庭信息</td><td></td><td>三类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-09 08:35</td><td><br /></td></tr><tr><td>22</td><td>力源信息</td><td></td><td>四类跟踪</td><td></td><td>湖北 武汉</td><td>2026-05-09 08:33</td><td>据说是皮包公司<br /></td></tr><tr><td>23</td><td>德冠新材</td><td></td><td>二类跟踪</td><td></td><td>广东 广州</td><td>2026-05-08 23:47</td><td><br /></td></tr><tr><td>24</td><td>云图控股</td><td>持有</td><td>一类跟踪</td><td>磷矿</td><td>四川 成都</td><td>2026-05-08 23:45</td><td><br /></td></tr><tr><td>25</td><td>回盛生物</td><td></td><td>三类跟踪</td><td>兽用药品</td><td>武汉 湖北</td><td>2026-05-07 22:01</td><td><br /></td></tr><tr><td>26</td><td>正帆科技</td><td></td><td>一类跟踪</td><td>泛半导体</td><td>上海</td><td>2026-05-07 14:07</td><td><br /></td></tr><tr><td>27</td><td>华康洁净</td><td>观望</td><td>二类跟踪</td><td></td><td>武汉 湖北</td><td>2026-05-07 00:31</td><td>估值高了<br /></td></tr><tr><td>28</td><td>四方光电</td><td>观望</td><td>二类跟踪</td><td></td><td>武汉 湖北</td><td>2026-05-06 21:51</td><td><br /></td></tr><tr><td>29</td><td>理工光科</td><td></td><td>二类跟踪</td><td>光纤</td><td>武汉 湖北</td><td>2026-05-06 12:22</td><td><br /></td></tr><tr><td>30</td><td>宏发股份</td><td></td><td></td><td></td><td></td><td>2026-05-05 21:39</td><td><br /></td></tr><tr><td>31</td><td>路德科技</td><td></td><td></td><td></td><td>武汉 湖北</td><td>2026-04-27 00:13</td><td><br /></td></tr><tr><td>32</td><td>神驰机电</td><td></td><td></td><td></td><td></td><td>2026-02-09 23:08</td><td><br /></td></tr><tr><td>33</td><td>瑜欣电子</td><td></td><td></td><td></td><td></td><td>2026-02-04 23:27</td><td><br /></td></tr><tr><td>34</td><td>中国汽研</td><td></td><td></td><td></td><td></td><td>2026-02-01 17:11</td><td><br /></td></tr><tr><td>35</td><td>西山科技</td><td></td><td></td><td></td><td></td><td>2026-01-26 00:41</td><td><br /></td></tr><tr><td>36</td><td>国创高新</td><td></td><td>三类跟踪</td><td></td><td>武汉 湖北</td><td>2025-11-12 22:36</td><td><br /></td></tr><tr><td>37</td><td>兴福电子初筛</td><td></td><td></td><td></td><td>湖北</td><td>2025-10-02 20:54</td><td><br /></td></tr><tr><td>38</td><td>溯联股份</td><td>观望</td><td></td><td></td><td></td><td>2025-08-24 21:25</td><td><br /></td></tr><tr><td>39</td><td>兴发集团</td><td>观望</td><td>一类跟踪</td><td>磷矿</td><td>湖北</td><td>2025-07-20 22:38</td><td><br /></td></tr><tr><td>40</td><td>凌玮科技</td><td>持有</td><td></td><td></td><td></td><td>2025-07-20 22:22</td><td><br /></td></tr><tr><td>41</td><td>皇马科技</td><td></td><td></td><td></td><td></td><td>2025-06-09 22:39</td><td><br /></td></tr><tr><td>42</td><td>辉煌科技</td><td></td><td></td><td></td><td></td><td>2025-06-09 22:32</td><td><br /></td></tr><tr><td>43</td><td>博隆技术</td><td></td><td></td><td></td><td></td><td>2025-04-11 23:30</td><td><br /></td></tr><tr><td>44</td><td>华康股份</td><td>持有</td><td></td><td>木糖醇</td><td></td><td>2025-04-02 23:32</td><td><br /></td></tr><tr><td>45</td><td>五方光电</td><td></td><td></td><td></td><td></td><td>2025-03-14 23:33</td><td><br /></td></tr><tr><td>46</td><td>华中数控</td><td></td><td></td><td></td><td>湖北 武汉</td><td>2025-03-14 12:22</td><td><br /></td></tr><tr><td>47</td><td>金宏气体初筛20250225</td><td></td><td></td><td></td><td>湖北</td><td>2025-03-12 21:59</td><td><br /></td></tr><tr><td>48</td><td>上声电子（688533）</td><td></td><td></td><td></td><td></td><td>2025-03-11 22:06</td><td><br /></td></tr><tr><td>49</td><td>东材科技</td><td></td><td></td><td></td><td></td><td>2025-03-10 23:43</td><td><br /></td></tr><tr><td>50</td><td>索通发展</td><td>持有</td><td></td><td>预焙阳极</td><td></td><td>2025-03-10 23:03</td><td><br /></td></tr><tr><td>51</td><td>泰坦科技初筛20250215</td><td></td><td>二类跟踪</td><td></td><td></td><td>2025-02-15 22:15</td><td><br /></td></tr><tr><td>52</td><td>帝尔激光初步分析（By：Sirius）</td><td></td><td></td><td></td><td></td><td>2025-01-22 00:39</td><td><br /></td></tr><tr><td>53</td><td>凯龙股份</td><td>观望</td><td>三类跟踪</td><td></td><td></td><td>2025-01-20 14:05</td><td><br /></td></tr><tr><td>54</td><td>恩华药业</td><td></td><td></td><td></td><td></td><td>2025-01-19 22:37</td><td><br /></td></tr><tr><td>55</td><td>人福医药</td><td>持有</td><td></td><td>麻醉药</td><td>湖北 武汉</td><td>2025-01-18 22:08</td><td><br /></td></tr><tr><td>56</td><td>双箭股份</td><td>卖出</td><td></td><td>橡胶</td><td></td><td>2024-11-21 00:51</td><td><br /></td></tr><tr><td>57</td><td>阳谷华泰</td><td>卖出</td><td></td><td>橡胶 半导体</td><td></td><td>2024-11-03 01:59</td><td><br /></td></tr><tr><td>58</td><td>港通医疗</td><td>观望</td><td>三类跟踪</td><td>医疗器械</td><td></td><td>2024-11-01 03:06</td><td><br /></td></tr><tr><td>59</td><td>川能动力</td><td></td><td></td><td></td><td></td><td>2024-11-01 02:41</td><td><br /></td></tr><tr><td>60</td><td>凯迪股份</td><td>观望</td><td></td><td></td><td></td><td>2024-03-24 20:45</td><td><br /></td></tr><tr><td>61</td><td>爱尔眼科</td><td>观望</td><td></td><td>医疗器械</td><td></td><td>2023-09-11 22:55</td><td><br /></td></tr><tr><td>62</td><td>利亚德</td><td>观望</td><td></td><td></td><td></td><td>2023-09-03 17:09</td><td><br /></td></tr></tbody></table><div class="protyle-action__table"><div class="table__resize"></div><div class="table__select"></div></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-subtype="h1" data-node-id="20230529105733-bk0jcxv" data-type="NodeHeading" class="h1" id="20230529105733-bk0jcxv" updated="20241101233607"><div contenteditable="false" spellcheck="false">台账</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101233448-lngynn5" data-type="NodeParagraph" class="p" id="20241101233448-lngynn5" updated="20241101233607"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div><div class="footnotes-defs-div"><hr class="footnotes-defs-hr" />
+<ol class="footnotes-defs-ol"><li><div data-subtype="h1" data-node-id="20260524231303-sm0qtwm" data-type="NodeHeading" class="h1"><div contenteditable="false" spellcheck="false"><span id="footnotes-def-1"></span>跟踪类型</div><div class="protyle-attr" contenteditable="false"></div></div><div data-subtype="u" data-node-id="20241101025225-4ncowk4" data-type="NodeList" class="list" id="20241101025225-4ncowk4" updated="20241101030012"><div data-marker="*" data-subtype="u" data-node-id="20241101025952-xs5hr6o" data-type="NodeListItem" class="li" id="20241101025952-xs5hr6o" updated="20241101030001"><div class="protyle-action" draggable="false"><svg><use xlink:href="#iconDot"></use></svg></div><div data-node-id="20241101025952-0xj9zrn" data-type="NodeParagraph" class="p" id="20241101025952-0xj9zrn" updated="20241101030001"><div contenteditable="false" spellcheck="false">一类跟踪<sup class="footnotes-ref" id="footnotes-ref-2"><a href="#footnotes-def-2">2</a></sup></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-marker="*" data-subtype="u" data-node-id="20241101025955-agibjhi" data-type="NodeListItem" class="li" id="20241101025955-agibjhi" updated="20241101030012"><div class="protyle-action" draggable="false"><svg><use xlink:href="#iconDot"></use></svg></div><div data-node-id="20241101025955-2h9x6ln" data-type="NodeParagraph" class="p" id="20241101025955-2h9x6ln" updated="20241101030012"><div contenteditable="false" spellcheck="false">二类跟踪<sup class="footnotes-ref" id="footnotes-ref-3"><a href="#footnotes-def-3">3</a></sup></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div></li>
+<li><div data-subtype="h1" data-node-id="20260524231303-40g45jr" data-type="NodeHeading" class="h1"><div contenteditable="false" spellcheck="false"><span id="footnotes-def-2"></span>一类跟踪</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101030001-y9xl6tv" data-type="NodeParagraph" class="p" id="20241101030001-y9xl6tv" updated="20241101030001"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div></li>
+<li><div data-subtype="h1" data-node-id="20260524231303-hjicfgc" data-type="NodeHeading" class="h1"><div contenteditable="false" spellcheck="false"><span id="footnotes-def-3"></span>二类跟踪</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101030012-ngylm7l" data-type="NodeParagraph" class="p" id="20241101030012-ngylm7l" updated="20241101030015"><div contenteditable="false" spellcheck="false">2类里，公司基本面还不错，逻辑简单，但遇到行业下行周期，短期没买点，所以日常跟踪即可。</div><div class="protyle-attr" contenteditable="false"></div></div></li>
+<li><div data-subtype="h1" data-node-id="20260524231303-z9i4kxi" data-type="NodeHeading" class="h1"><div contenteditable="false" spellcheck="false"><span id="footnotes-def-4"></span>个股类型</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101233205-w0on7bc" data-type="NodeBlockquote" class="bq" id="20241101233205-w0on7bc" updated="20241101233219"><div data-node-id="20241101233219-uq7qea7" data-type="NodeParagraph" class="p" id="20241101233219-uq7qea7" updated="20241101233219"><div contenteditable="false" spellcheck="false">去看彼得林奇的书或者李杰的书，对几种不同的公司模型都有介绍，分这么几大类：行业细分领域隐形冠军长期成长模型，困境反转模型，白马股杀估值杀业绩但不能杀逻辑模型，周期性行业由低景气度预期转入高景气度模型，低风险高不确定性模型。</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101233219-v2viek9" data-type="NodeParagraph" class="p" id="20241101233219-v2viek9" updated="20241101233219"><div contenteditable="false" spellcheck="false">这几类模型之间可以互相叠加。比如某公司本来就是困境反转如果再叠加了周期性行业由低景气度进入高景气度，很容易出现战略性大机会，比如湖北宜化，21年一路涨过最高13倍。  
+再比如低风险高不确定模型，这类公司往往是原本的主营业务经过长年发展已经趋于稳定，市值和估值趋于稳定，公司后面开始切入到一个高成长性行业里面，从而迎来第二次成长机会。比如杉杉股份，之前主营业务是服饰和做地产的，19年之后公司切入锂电负极业务，并一度成为负极行业前3企业，公司迎来第二次成长机会，市值和股价也因此而重新定位一路走高。</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241103021401-f6xtrzl" data-type="NodeTable" class="table" updated="20241103023843" colgroup="min-width: 60px;|width: 391px;|min-width: 60px;|" id="20241103021401-f6xtrzl"><div contenteditable="false"><table contenteditable="false" spellcheck="false"><colgroup><col style="min-width: 60px;" /><col style="width: 391px;" /><col style="min-width: 60px;" /><col /></colgroup><thead><tr><th></th><th>模型</th><th>跟踪等级</th><th>等级</th></tr></thead><tbody><tr><td></td><td>隐形冠军长期不涨模型</td><td>一类跟踪</td><td></td></tr><tr><td></td><td>白马股杀估值杀业绩但不能杀逻辑模型</td><td>二类跟踪</td><td>没看到变化</td></tr><tr><td></td><td>简单公司困境反转模型、低风险高不确定性模型</td><td>三类跟踪</td><td></td></tr><tr><td></td><td>复杂业务</td><td>四类跟踪</td><td></td></tr></tbody></table><div class="protyle-action__table"><div class="table__resize"></div><div class="table__select"></div></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-subtype="u" data-node-id="20241101025300-gkrr5cd" data-type="NodeList" class="list" id="20241101025300-gkrr5cd" updated="20241101231447"><div data-marker="*" data-subtype="u" data-node-id="20241101233157-h5iiucu" data-type="NodeListItem" class="li" updated="20241101233157" id="20241101233157-h5iiucu"><div class="protyle-action" draggable="false"><svg><use xlink:href="#iconDot"></use></svg></div><div data-node-id="20241101233157-d647vju" data-type="NodeParagraph" class="p" id="20241101233157-d647vju" updated="20241101233158"><div contenteditable="false" spellcheck="false">周期性行业由低景气度预期转入高景气度模型</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241101233203-fvfbv3x" data-type="NodeParagraph" class="p" id="20241101233203-fvfbv3x" updated="20241103021941"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20241102213912-v2v2698" data-type="NodeParagraph" class="p" id="20241102213912-v2v2698" updated="20241102213912"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div></li>
+<li><div data-subtype="h1" data-node-id="20260524231303-xfalvpg" data-type="NodeHeading" class="h1"><div contenteditable="false" spellcheck="false"><span id="footnotes-def-5"></span>选股方法</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20260121233100-ecn7b8n" data-type="NodeParagraph" class="p" id="20260121233100-ecn7b8n" updated="20260121233103"><div contenteditable="false" spellcheck="false">用选股软件先使用一些自己喜欢的静态指标比如pe' pb ，资产负债率，商誉资产占比，股息等等筛出来三五十家。然后在看这三五十家股里找喜欢的图形，我比较喜欢之前高位跌了至少一半然后在一个区间震荡走平半年以上，然后最近两周内又有成交量放大，底部向上微微抬起的图形。然后再初筛</div><div class="protyle-attr" contenteditable="false"></div></div></li>
+</ol></div></div>
+<script>
+window.siyuan = {
+  config: {
+    appearance: {
+      mode: 0,
+      codeBlockThemeDark: "base16/dracula",
+      codeBlockThemeLight: "github"
+    },
+    editor: {
+      codeLineWrap: false,
+      codeLigatures: false,
+      codeSyntaxHighlightLineNum: false,
+      fontSize: 16,
+      plantUMLServePath: "https://www.plantuml.com/plantuml/svg/~1",
+      katexMacros: "{}"
+    }
+  },
+  languages: { copy: "复制" }
+};
+window.siyuan.config.appearance.codeBlockTheme = "github";
+</script>
+<script src="stage/protyle/js/protyle-html.js"></script>
+<script src="stage/build/export/protyle-method.js"></script>
+<script src="stage/protyle/js/lute/lute.min.js"></script>
+<script>
+const previewElement = document.getElementById("preview");
+if (window.Protyle && previewElement) {
+  Protyle.highlightRender(previewElement, "stage/protyle");
+  Protyle.mathRender(previewElement, "stage/protyle", false);
+  Protyle.mermaidRender(previewElement, "stage/protyle");
+  Protyle.flowchartRender(previewElement, "stage/protyle");
+  Protyle.graphvizRender(previewElement, "stage/protyle");
+  Protyle.chartRender(previewElement, "stage/protyle");
+  Protyle.mindmapRender(previewElement, "stage/protyle");
+  Protyle.abcRender(previewElement, "stage/protyle");
+  Protyle.htmlRender(previewElement);
+  Protyle.plantumlRender(previewElement, "stage/protyle");
+}
+</script>
+</body>
+</html>
