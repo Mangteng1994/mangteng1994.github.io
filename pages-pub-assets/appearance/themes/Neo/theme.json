@@ -2,20 +2,20 @@
   "name": "Neo",
   "author": "QYL",
   "url": "https://github.com/QYLexpired/Neo",
-  "version": "1.1.5",
+  "version": "1.2.1",
   "minAppVersion": "3.6.5",
   "displayName": {
     "default": "Neo"
   },
   "description": {
     "default": "An ultra-minimalist theme for SiYuan",
-    "zh_CN": "一款极致简约的思源笔记主题",
-    "zh_CHT": "一款极致簡約的思源筆記主題"
+    "zh-CN": "一款极致简约的思源笔记主题",
+    "zh-TW": "一款极致簡約的思源筆記主題"
   },
   "readme": {
     "default": "README.md",
-    "zh_CN": "README_zh_CN.md",
-    "zh_CHT": "README_zh_CHT.md"
+    "zh-CN": "README.zh-CN.md",
+    "zh-TW": "README.zh-TW.md"
   },
   "funding": {
     "custom": ["https://ifdian.net/a/QYLexpired"]
