@@ -1,20 +1,31 @@
 #### About the Theme
+- **Neo Theme**: Neo is a third-party theme designed specifically for SiYuan Notes, delivering a delightful note-taking experience through its minimalist and refined design.
 - **Neo+ plugin is required**: To ensure optimal performance, theme styles depend on the Neo+ plugin. Therefore, the Neo+ plugin **MUST** be installed for the theme to display correctly.
-- **Compatibility note**: The theme utilizes a large number of cutting-edge CSS features; full experience is only guaranteed on desktop and Chromium-based browsers.
-- **Feedback**: [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401), [GitHub](https://github.com/QYLexpired/Neo/issues)
+- **Feedback**: For any questions or suggestions during use, please visit the [Neo Theme Introduction & Feedback Thread](https://ld246.com/article/1783158376401) or [GitHub](https://github.com/QYLexpired/Neo/issues)
+- **Support Me**: The Neo theme is completely free. If you enjoy this theme, feel free to star it on [GitHub](https://github.com/QYLexpired/Neo) or [buy me a coffee](https://icnmjy02sv9g.feishu.cn/wiki/FekNwrtB7ia1WckYelRckwzZnig?from=from_copylink)
 #### What's New
-##### v1.3.0 ~ v1.3.2
-- Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
-- New extended feature: Side notes
-- Redesigned menu and dialog shadows and frosted glass effects
-- Redesigned code block styles
-- Increased interface border radius
+##### v1.3.9
+- Added smooth transition for light/dark mode switching
+- Dividers can now be set to different colors via block styles
+- Adjusted some button styles
+- Fixed side memo errors
+- Optimized AI agent styles
+- Changed the color extraction algorithm for theme color following banner images
+- Adjusted block reference popup animation
+##### v1.3.8
+- Adapted for SiYuan 3.7.4-alpha.1
+    - Adapted heading auto-numbering
+    - Adapted document top database properties
+    - Adapted document bottom backlinks
+- Redesigned message bubble animation
+- Redesigned bazaar animation
+- Optimized cross-block selection effect
+- Optimized block drag hint effect
 #### Features
 > Some of the following features depend on the Neo+ plugin.
 - Excellent performance comparable to the default theme
 - Rich interface styles freely mix and match, like having a theme library
 - Strictly built color system using the OKLCH color space, with a wide range of preset color schemes and support for custom theme colors
-- Can use SiYuan AI Agent to automatically generate interface color schemes via natural language
 - Theme color can follow time, banner image, or system accent color
 - Global glassmorphism effects for a transparent and layered look
 - Non-linear animations added to enhance interactive delight
@@ -41,9 +52,57 @@ The creation of the Neo theme drew significant inspiration from the following pr
 - [Rem Craft](https://github.com/svchord/Rem-Craft)
 - [Savor](https://github.com/royc01/notion-theme)
 #### Update Notes
+##### v1.3.9
+- Added smooth transition for light/dark mode switching
+- Dividers can now be set to different colors via block styles
+- Adjusted some button styles
+- Fixed side memo errors
+- Optimized AI agent styles
+- Changed the color extraction algorithm for theme color following banner images
+- Adjusted block reference popup animation
+##### v1.3.8
+- Adapted for SiYuan 3.7.4-alpha.1
+    - Adapted heading auto-numbering
+    - Adapted document top database properties
+    - Adapted document bottom backlinks
+- Redesigned message bubble animation
+- Redesigned bazaar animation
+- Optimized cross-block selection effect
+- Optimized block drag hint effect
+##### v1.3.7
+- Adapted for SiYuan 3.7.3
+- Adjusted menu and dialog shadows
+- Adjusted main interface shadows
+- Optimized fluid cursor ripple effect
+- Side memo support temporary hiding
+- Fixed conflict between scroll effect and side memo
+##### v1.3.6
+- Removed some overflow fade-out effects, completely resolving the rendering process crash (CTD) issue
+- Adapted for SiYuan 3.7.3-beta.1
+##### v1.3.4 ~ v1.3.5
+- New texture: Embossed Paper
+- Optimized graph colors
+- Optimized search interface
+- Optimized contrast-color threshold
+- Optimized scroll effect, and fixed the issue where it caused abnormal styles in the AI agent input field
+- Fixed some errors with side memo
+- Reduced saturation of colored headings and colored lists
+- Optimized readability of colored headings and colored lists under some preset color schemes
+##### v1.3.3
+- Adapted for SiYuan 3.7.2
+    - Fixed document tree guide line styles
+    - Optimized banner image dialog styles
+    - Fixed note input field styles
+- Added Visual - Frosted Glass; the theme will no longer enable frosted glass by default, must be manually enabled
+- Optimized fluid cursor path to prevent jaggedness when the mouse moves in large arcs
+- Fluid cursor now supports configurable mouse click effect
+- New preset color scheme: Lakeside
+- Overridden Windows select input styles
+- Optimized Windows top-right control bar styles
+- Removed Performance mode
+- Removed AI color scheme feature
 ##### v1.3.0 ~ v1.3.2
-- Support using SiYuan AI Agent to automatically generate interface color schemes via natural language
-- New extended feature: Side notes
+- New extended feature: Side memo
 - Redesigned menu and dialog shadows and frosted glass effects
 - Redesigned code block styles
 - Increased interface border radius
